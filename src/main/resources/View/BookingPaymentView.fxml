@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airlinereervationsystem.controller.BookingPaymentController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="179.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label focusTraversable="false" text="تأكيد الحجز و إتمام الدفع للمسافر">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" focusTraversable="false" text="تفاصيل الرحلة المختارة">
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" spacing="12.0">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="12.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="lblFlightSummary" />
+                  <Label text="تفاصيل الرحلة :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="12.0">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="8.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="lblTotalAmount" />
+                  <Label maxWidth="1.7976931348623157E308" text="السعر الإجمالي :">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <ComboBox fx:id="cbPaymentMethod" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="طريقة الدفع">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="12.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button fx:id="btnConfirmAndPay" focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleConfirmAndPay" text="تأكيد الحجز والدفع الفوري" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="12.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnCancelBooking" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCancelBooking" text="إلغاء والعودة للوحة التحكم" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="12.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

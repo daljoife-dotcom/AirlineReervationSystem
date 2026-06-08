@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airlinereervationsystem.controller.AircraftManagementController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="250.0" layoutY="39.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label focusTraversable="false" text="إدارة أسطول الطائرات">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="41.0" prefWidth="600.0" spacing="8.0">
+               <children>
+                  <Label text="موديل الطائرة" />
+                  <TextField fx:id="txtAircraftModel" nodeOrientation="RIGHT_TO_LEFT" />
+                  <Label text="السعة الإجمالية للمقاعد" />
+                  <TextField fx:id="txtTotalCapacity" nodeOrientation="RIGHT_TO_LEFT" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </HBox>
+            <Button fx:id="btnAddAircraft" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAddAircraft" text="إضافة طائرة">
+               <VBox.margin>
+                  <Insets left="12.0" right="12.0" top="12.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnDeleteAircraft" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDeleteAircraft" text="حذف طائرة">
+               <VBox.margin>
+                  <Insets left="12.0" right="12.0" top="8.0" />
+               </VBox.margin>
+            </Button>
+            <TableView fx:id="aircraftTable" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="182.0" text="رقم الطائرة" />
+                <TableColumn fx:id="colModel" prefWidth="219.0" text="الموديل" />
+                  <TableColumn fx:id="colCapacity" prefWidth="182.0" text="السعة" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+            </TableView>
+            <Button fx:id="btnBackToFlights" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleBackToFlights" text="العودة">
+               <VBox.margin>
+                  <Insets left="12.0" right="12.0" top="12.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

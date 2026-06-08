@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airlinereervationsystem.controller.PassengerDashboardController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="173.0" layoutY="30.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="لوحة تحكم العميل">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="600.0" spacing="8.0">
+               <children>
+                  <Label fx:id="lblWelcomePassenger" text="أسم المستخدم" />
+               </children>
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="16.0" />
+               </VBox.margin>
+            </HBox>
+            <TextField fx:id="txtSearchDestination" alignment="CENTER_RIGHT" promptText="بحث...">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="24.0" />
+               </VBox.margin>
+            </TextField>
+            <DatePicker fx:id="dpSearchDate" maxWidth="1.7976931348623157E308" onAction="#handleDateSearch">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="12.0" />
+               </VBox.margin>
+            </DatePicker>
+            <TableView fx:id="passengerFlightTable" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="colFlightNum" prefWidth="84.0" text="رقم الرحلة" />
+                <TableColumn fx:id="colDestination" prefWidth="133.0" text="الوجهة" />
+                  <TableColumn fx:id="colDate" prefWidth="116.0" text="التاريخ" />
+                  <TableColumn fx:id="colPrice" prefWidth="106.0" text="السعر" />
+                  <TableColumn fx:id="colSeats" prefWidth="112.0" text="المقاعدة المتاحة" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="12.0" />
+               </VBox.margin>
+            </TableView>
+            <Button fx:id="btnGoToBooking" focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleGoToBooking" text="الانتقال لتأكيد الحجز والدفع">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="12.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLogout" focusTraversable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogout" text="تسجيل الخروج" textFill="#e12121">
+               <VBox.margin>
+                  <Insets left="24.0" right="24.0" top="12.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

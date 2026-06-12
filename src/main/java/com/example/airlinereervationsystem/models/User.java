@@ -1,12 +1,13 @@
 package com.example.airlinereervationsystem.models;
-
+// إنشاء كلاس من نوع abstract لنقوم بالوراثة منه
 public abstract class User {
     protected int userId;
     protected String fullName;
     protected String email;
     protected String passwordHash;
-    protected String userType;
+    protected String userType; // تحديد هل المستخدم admin او Customer
 
+    // Constructor
     public User(int userId, String fullName, String email, String passwordHash, String userType) {
         this.userId = userId;
         this.fullName = fullName;

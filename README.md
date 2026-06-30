@@ -5,7 +5,7 @@
 ## 👤 معلومات الطالبة (Student Information)
 - **اسم الطالبة:** دنيا أحمد (Donia Ahmed)
 - **الرقم الدراسي:** 02811
-- **المادة:** Advanced Object-Oriented Programming Course - Winter 2026
+- **المادة:** Advanced Object-Oriented Programming Course
 - **الجهة التعليمية:** الأكاديمية الليبية للدراسات العليا - فرع الجبل الأخضر - قسم علوم الحاسب وتقنية المعلومات
 
 ---

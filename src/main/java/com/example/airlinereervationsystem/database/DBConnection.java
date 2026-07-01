@@ -27,7 +27,7 @@ public class DBConnection {
     // إعدادات نص الاتصال بالـ JDBC الخاص بسيرفر SQL Server مع تفعيل التشفير والأمان
     private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=AirlineReservationSystem;encrypt=true;trustServerCertificate=true;";
     private static final String USER = "sa";
-    private static final String PASSWORD = ""; // بيانات الاعتماد وكلمة المرور الخاصة بقاعدة البيانات
+    private static final String PASSWORD = "12345678"; // بيانات الاعتماد وكلمة المرور الخاصة بقاعدة البيانات
 
     /**
      * Instantiates and registers a secure socket connection channel to the SQL Server target catalog.
